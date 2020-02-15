@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "421166181665",
+    "firebase_url": "https://spirometre-abc33.firebaseio.com",
+    "project_id": "spirometre-abc33",
+    "storage_bucket": "spirometre-abc33.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:421166181665:android:b65457eba1d9d1eb",
+        "android_client_info": {
+          "package_name": "com.enderyasli.spirometre"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "421166181665-e5oc68ccecl30dipdbmk7dd9vjamsd2h.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.enderyasli.spirometre",
+            "certificate_hash": "58d8e235be43c048aa3cf86a1d37dba41c0c63e3"
+          }
+        },
+        {
+          "client_id": "421166181665-23sllvh55e84i8lldblhu6o9fik2g9su.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBYPWEsMvwgxSZy7GARKBmwK6bpGTELJfU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "421166181665-23sllvh55e84i8lldblhu6o9fik2g9su.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

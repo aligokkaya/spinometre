@@ -1,0 +1,51 @@
+#include <SoftwareSerial.h>
+SoftwareSerial mySerial(10, 11);
+
+volatile int flow_frequency; // sensor palsi
+unsigned int l_hour; // litre / saat
+unsigned char flowsensor = 2; // Sensor girişi
+unsigned long currentTime;
+unsigned long cloopTime;
+int sayac=0;
+void flow () // Interrupt
+{
+flow_frequency++;
+}
+void setup()
+{
+  mySerial.begin(9600);
+// sensor giriş ayarları
+pinMode(flowsensor, INPUT);
+digitalWrite(flowsensor, HIGH);
+Serial.begin(9600);
+// İnterrupt ayarı
+attachInterrupt(0, flow, RISING);
+sei(); // interrupts açık
+currentTime = millis();
+cloopTime = currentTime;
+}
+void loop ()
+{
+currentTime = millis();
+// saniyede geçen pals sayısı sayılıp litre - saat hesabı alınması
+if(currentTime >= (cloopTime + 1000))
+{
+cloopTime = currentTime; // saniyeyi güncelle
+l_hour = (flow_frequency * 60 / 7.5); // litre hesabı frekans * 60 / 7.5
+flow_frequency = 0; // sayıcıyı sıfırla
+
+
+
+
+delay(1000);
+if((l_hour)>=1)
+{
+Serial.print(l_hour, DEC); // sonucu seri ekranda göster
+Serial.println(" L/hour");
+     char ch = mySerial.read();
+mySerial.println(l_hour); 
+    delay(1000);
+}
+
+}
+}
